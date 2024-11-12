@@ -1,0 +1,11 @@
+---
+foreman:
+  hosts:
+    localhost:
+  vars:
+    foreman_dhcp_range:
+      start: '175'
+      end: '195'
+    foreman_reverse_zone: '{{ subnet | reverse_zone }}'
+...
+# vim: set filetype=yaml

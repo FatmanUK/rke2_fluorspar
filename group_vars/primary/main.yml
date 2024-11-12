@@ -1,0 +1,6 @@
+---
+primaries:
+  vars:
+    longhorn_number_of_replicas: 1
+...
+# vim: set filetype=yaml

@@ -1,0 +1,9 @@
+---
+all:
+  vars:
+    vm_net_bridge: 'virbr0'
+    subnet: '10.7.6.0/24'
+    domain: 'dreamtrack.net'
+    gateway_host_id: '254'
+...
+# vim: set filetype=yaml

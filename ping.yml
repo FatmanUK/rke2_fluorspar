@@ -1,0 +1,13 @@
+---
+- name: 'Ping all hosts'
+  hosts: 'all'
+  become: no
+  gather_facts: no
+  handlers:
+    - import_tasks: 'handlers/main.yml'
+  tags:
+    - 'ping'
+  tasks:
+    - ping:
+...
+# vim: set filetype=yaml

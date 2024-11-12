@@ -1,0 +1,10 @@
+---
+all:
+  vars:
+    vm_net_bridge: 'core_bridge'
+    subnet: '10.20.0.0/24'
+    domain: 'k3s.lab'
+    gateway_host_id: '253'
+    is_virtual: yes
+...
+# vim: set filetype=yaml

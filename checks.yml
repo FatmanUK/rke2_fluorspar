@@ -1,0 +1,20 @@
+---
+- name: 'Validation checks'
+  hosts: 'primaries'
+  become: no
+  gather_facts: no
+  handlers:
+    - import_tasks: 'handlers/main.yml'
+  tags:
+    - 'checks'
+    - 'always'
+  roles:
+    - 'ansible_groups_check'   # this doesn't work n
+ow?
+    - 'ansible_version_check'  # not sure this is ne
+eded
+    - 'ansible_vault_check'    # not sure this is ne
+eded either
+    - 'builder_registry_check'
+...
+# vim: set filetype=yaml

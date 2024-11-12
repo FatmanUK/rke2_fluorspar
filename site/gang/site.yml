@@ -1,0 +1,25 @@
+---
+os_flatcar:
+  hosts:
+    gg-mtr-1:
+      host_id: '211'
+    gg-mtr-2:
+      host_id: '212'
+    gg-mtr-3:
+      host_id: '213'
+    gg-mtr-4:
+      host_id: '214'
+    gg-cld-1:
+      host_id: '215'
+
+primaries:
+  hosts:
+    gg-mtr-1:
+
+secondaries:
+  hosts:
+    gg-mtr-2:
+    gg-mtr-3:
+    gg-mtr-4:
+...
+# vim: set filetype=yaml

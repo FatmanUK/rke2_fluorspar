@@ -1,0 +1,30 @@
+---
+os_flatcar:
+  hosts:
+    wk-mtr-1:
+      host_id: '101'
+    wk-mtr-2:
+      host_id: '102'
+    wk-mtr-3:
+      host_id: '103'
+    wk-mtr-4:
+      host_id: '104'
+    wk-mtr-5:
+      host_id: '105'
+    wk-cld-1:
+      host_id: '111'
+    wk-cld-2:
+      host_id: '112'
+
+primaries:
+  hosts:
+    wk-mtr-1:
+
+secondaries:
+  hosts:
+    wk-mtr-2:
+    wk-mtr-3:
+    wk-mtr-4:
+    wk-mtr-5:
+...
+# vim: set filetype=yaml
