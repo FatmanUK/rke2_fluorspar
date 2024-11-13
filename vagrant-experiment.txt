@@ -1,0 +1,33 @@
+Vagrant experiment
+==================
+
+git switch vagrant-experiment
+
+Install Vagrant 2.4.1 and pin while they fix bug https://github.com/hashicorp/vagrant/issues/13527 .  The libvirt-dev package is also needed.
+
+sudo apt install -o Acquire::http::proxy=false vagrant=2.4.1-1 libvirt-dev
+vagrant plugin install vagrant-libvirt
+sudo apt-mark hold vagrant
+
+Create a base box.
+
+mkdir voidlinux
+touch voidlinux/{vm.xml,base.qcow2,metadata.json,info.json,Vagrantfile}
+...
+
+./scripts/mkboxes.bash
+
+# :) @devlaptop68:rke2_fluorspar $ vagrant box add --name voidlinux boxes/voidlinux.box 
+
+==> box: Box file was not detected as metadata. Adding it directly...
+==> box: Adding box 'voidlinux' (v0) for provider: 
+    box: Unpacking necessary files from: file:///home/adam.richardson/rke2_fluorspar/boxes/voidlinux.box
+==> box: Successfully added box 'voidlinux' (v0) for ''!
+
+# :) @devlaptop68:rke2_fluorspar $ vagrant up
+Bringing machine 'default' up with 'libvirt' provider...
+[fog][WARNING] Unrecognized arguments: libvirt_ip_command
+No image format specified for box.
+
+
+

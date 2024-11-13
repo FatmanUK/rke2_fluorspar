@@ -1,0 +1,4 @@
+{
+  "provider": "libvirt",
+  "architecture": "x86_64"
+}
